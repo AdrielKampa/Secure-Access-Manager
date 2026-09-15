@@ -1,0 +1,17 @@
+# Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Never commit key material, even dev/self-signed
+*.p12
+*.jks
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
