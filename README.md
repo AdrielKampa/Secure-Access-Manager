@@ -69,7 +69,7 @@ for invalid credentials, followed by:
 
 once the rate limit was reached.
 
-![Brute Force Blocked](docs/prints/brute-force-blocked.png)
+![Brute Force Blocked](docs/brute-force-blocked.png)
 
 *Figure 1 — PowerShell brute-force simulation showing failed authentication followed by rate limiting.*
 
@@ -91,7 +91,7 @@ For example, failed authentication attempts and blocked requests are recorded as
 
 This provides a basic forensic trail that could later be forwarded to a centralized logging or SIEM platform.
 
-![H2 Audit Trail Console](docs/prints/audit-trail-h2.png)
+![H2 Audit Trail Console](docs/audit-trail-h2.png)
 
 *Figure 2 — H2 Console showing authentication and security events stored in the audit log.*
 
@@ -107,7 +107,7 @@ I used **Wireshark** to inspect the connection and verify that the application d
 
 The capture shows the TLS 1.3 handshake between the client and server, including the negotiation of the secure connection.
 
-![Wireshark TLS 1.3 Handshake](docs/prints/wireshark-handshake.png)
+![Wireshark TLS 1.3 Handshake](docs/wireshark-handshake.png)
 
 *Figure 3.1 — Wireshark capture showing the TLS 1.3 Client Hello and Server Hello.*
 
@@ -117,7 +117,7 @@ After the TLS handshake, HTTP data is carried inside encrypted TLS Application D
 
 The captured payload does not expose the credentials or JWT contents in plaintext.
 
-![Wireshark Encrypted Payload](docs/prints/wireshark-payload-encrypted.png)
+![Wireshark Encrypted Payload](docs/wireshark-payload-encrypted.png)
 
 *Figure 3.2 — Wireshark inspection of an encrypted TLS Application Data frame.*
 
